@@ -1,0 +1,11 @@
+{
+  "name": "startzjcommonfun",
+  "version": "1.0.01",
+  "description": "StartZJ自己用的常见方法",
+  "main": "simpleFuncitonCollect.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "StartZJ",
+  "license": "ISC"
+}
