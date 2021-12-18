@@ -1,3 +1,9 @@
 require('./simpleFuncitonCollect')
-// console.log(asyncSetTime(() => { console.log('say Hello!')}, 1000));
-// console.log(validateIsEmail('-0'));
+let list = [];
+for (let i = 0; i < 5; i++) {
+    list.push({
+        name: '小红',
+        age: i
+    })
+}
+console.log(objectSaveOnly(list, 'age')); 
