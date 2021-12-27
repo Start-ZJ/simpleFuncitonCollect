@@ -19,6 +19,11 @@ validateIsEmail = (number) => {
     let numPattern = /^1[34578]\d{9}$/;
     return numPattern.test(number)
 }
+//正则匹配链接里的参数 e=xxxx getQueryString(params)
+getQueryString = (param) => {
+    var t = new RegExp("(^|&)" + param + "=([^&]*)(&|$)"), i = window.location.search.substr(1).match(t);
+    return null != i ? unescape(i[2]) : null;
+}
 //简单对象数组去重
 objectSaveOnly = (ary, keyWord) => {
     if (typeof ary !== 'object') {
@@ -41,10 +46,21 @@ objectSaveOnly = (ary, keyWord) => {
     });
     return newAry;
 }
+//简单数组去重(非对象)
+SimpleArraySaveOnly = (arr) => {
+    return [...new Set(arr)];
+}
+// 防抖
+AntiShakeFun = () => {
+
+}
+// 节流
 //提取Url里的参数
 module.exports = {
     asyncSetTime,
     validateIsNumber,
     validateIsEmail,
-    objectSaveOnly
+    objectSaveOnly,
+    SimpleArraySaveOnly,
+    getQueryString
 }

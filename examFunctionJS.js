@@ -1,9 +1,3 @@
 require('./simpleFuncitonCollect')
-let list = [];
-for (let i = 0; i < 5; i++) {
-    list.push({
-        name: '小红',
-        age: i
-    })
-}
-console.log(objectSaveOnly(list, 'age')); 
+let list = [1, 2, 3, 4, 5, 5, 5, 5];
+console.log(removeSameEle(list)); 
