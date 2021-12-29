@@ -1,3 +1,4 @@
+let moment = require('moment')
 // 执行一些简单的延时操作
 asyncSetTime = (funName, time) => {
     if (funName && typeof funName === "function") {
@@ -55,12 +56,16 @@ AntiShakeFun = () => {
 
 }
 // 节流
-//提取Url里的参数
+// 获取当前月的长度
+getMonthLength = (Year, Month) => {
+    return parseInt(moment(`${Year}/${Month}`, 'YYYY/MM').endOf('month').format("DD"));
+}
 module.exports = {
     asyncSetTime,
     validateIsNumber,
     validateIsEmail,
     objectSaveOnly,
     SimpleArraySaveOnly,
-    getQueryString
+    getQueryString,
+    getMonthLength
 }
