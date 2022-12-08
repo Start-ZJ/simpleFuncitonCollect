@@ -1,7 +1,9 @@
-import { type } from "os";
-
 const moment = require('moment');
-
+declare global {
+    interface Window {
+        [key: string]: any
+    }
+}
 /** @description 执行一些简单的延时操作 */
 const asyncSetTime = (funName: Function, time: number): void => {
     setTimeout(() => { funName && typeof funName === "function" ? funName() : null }, time);
@@ -92,6 +94,11 @@ const getNowFormatDate = (): string => {
     let currentdate = year + seperator1 + month + seperator1 + strDate
     return currentdate
 }
+/** @description 效验是否数字 */
+const checkIsNum = (value: string | number): Boolean => {
+    const result = +value || 0;
+    return !result
+}
 export {
     asyncSetTime,
     validateIsNumber,
@@ -101,5 +108,6 @@ export {
     SimpleArraySaveOnly,
     getQueryString,
     getMonthLength,
-    getDistanceDays
+    getDistanceDays,
+    checkIsNum
 }
