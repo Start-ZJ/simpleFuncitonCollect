@@ -32,7 +32,7 @@ const getQueryString = (param: string): string | number | null => {
     return null != i ? unescape(i[2]) : null;
 }
 /** @description 简单对象数组去重 */
-const objectSaveOnly = (ary: Array<any>, keyWord: string) => {
+const objectSaveOnly = (ary: Array<any>, keyWord: string): null | Array<any> => {
     if (typeof ary !== 'object') {
         console.error('请确认传入的是一个数组！');
         return;
@@ -109,5 +109,6 @@ export {
     getQueryString,
     getMonthLength,
     getDistanceDays,
-    checkIsNum
+    checkIsNum,
+    AntiShakeFun
 }
