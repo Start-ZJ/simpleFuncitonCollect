@@ -1,10 +1,10 @@
 {
   "name": "startzjcommonfun",
-  "version": "1.0.02",
+  "version": "1.0.04",
   "description": "StartZJ自己用的常见方法",
-  "main": "simpleFuncitonCollect.js",
+  "main": "dist/simpleFuncitonCollect.js",
   "scripts": {
-    "build-min": "rimraf '*/dist' && webpack"
+    "build-min": "rimraf dist/* && webpack"
   },
   "author": "StartZJ",
   "license": "ISC",

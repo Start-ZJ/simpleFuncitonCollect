@@ -99,6 +99,20 @@ const checkIsNum = (value: string | number): Boolean => {
     const result = +value || 0;
     return !result
 }
+/** @description 比较日期大小 YYYY-MM-DD*/
+const dateCompare = (date1: string, date2: string): Number => {
+    date1 = date1.replace(/\-/gi, "/");
+    date2 = date2.replace(/\-/gi, "/");
+    const time1 = new Date(date1).getTime();
+    const time2 = new Date(date2).getTime();
+    if (time1 > time2) {
+        return 1;
+    } else if (time1 == time2) {
+        return 0;
+    } else {
+        return -1;
+    }
+}
 export {
     asyncSetTime,
     validateIsNumber,
@@ -110,5 +124,6 @@ export {
     getMonthLength,
     getDistanceDays,
     checkIsNum,
-    AntiShakeFun
+    AntiShakeFun,
+    dateCompare
 }
