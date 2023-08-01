@@ -1,24 +1,24 @@
 {
-  "name": "startzjcommonfun",
-  "version": "1.0.04",
-  "description": "StartZJ自己用的常见方法",
-  "main": "dist/simpleFuncitonCollect.js",
-  "scripts": {
-    "build-min": "rimraf dist/* && webpack"
-  },
-  "author": "StartZJ",
-  "license": "ISC",
-  "dependencies": {
-    "axios": "^1.2.1",
-    "clean-webpack-plugin": "^4.0.0",
-    "moment": "^2.29.1",
-    "ts-loader": "^9.4.2",
-    "typescript": "^4.8.4",
-    "webpack": "^5.75.0",
-    "webpack-dev-server": "^4.11.1"
-  },
-  "devDependencies": {
-    "@types/node": "^18.11.17",
-    "webpack-cli": "^5.0.1"
-  }
+	"name": "startzjcommonfun",
+	"version": "1.0.104",
+	"description": "StartZJ自己用的常见方法",
+	"main": "dist/simpleFuncitonCollect.js",
+	"scripts": {
+		"build-min": "rimraf dist/* && webpack"
+	},
+	"author": "StartZJ",
+	"license": "ISC",
+	"dependencies": {
+		"axios": "^1.2.1",
+		"clean-webpack-plugin": "^4.0.0",
+		"moment": "^2.29.1",
+		"ts-loader": "^9.4.2",
+		"typescript": "^4.8.4",
+		"webpack": "^5.75.0",
+		"webpack-dev-server": "^4.11.1"
+	},
+	"devDependencies": {
+		"@types/node": "^20.4.5",
+		"webpack-cli": "^5.0.1"
+	}
 }
