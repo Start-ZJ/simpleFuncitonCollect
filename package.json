@@ -1,6 +1,6 @@
 {
 	"name": "startzjcommonfun",
-	"version": "1.0.104",
+	"version": "1.1.2",
 	"description": "StartZJ自己用的常见方法",
 	"main": "dist/simpleFuncitonCollect.js",
 	"scripts": {

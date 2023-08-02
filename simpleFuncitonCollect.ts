@@ -32,13 +32,13 @@ const getQueryString = (param: string): string | number | null => {
     return null != i ? unescape(i[2]) : null;
 }
 /** @description 简单对象数组去重 */
-const objectSaveOnly = (ary: Array<any>, keyWord: string): null | Array<any> => {
+const objectSaveOnly = (ary: Array<any>, keyWord: string): Boolean | null | Array<any> => {
     if (typeof ary !== 'object') {
         console.error('请确认传入的是一个数组！');
-        return;
+        return false;
     }
     if (ary.length === 0) {//数组的长度为0不需要去重
-        return;
+        return false;
     }
     let newAry: Array<any> = [];
     ary.forEach((element0: any, index0: number) => {
