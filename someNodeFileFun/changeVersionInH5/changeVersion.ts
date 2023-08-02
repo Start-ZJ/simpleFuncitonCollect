@@ -1,10 +1,10 @@
-// @ts-nocheck
+
 const path = require("path");//引入路径模块
 const fs = require("fs");//引入文件模块
-const getNewVersion = (arr) => {
-    if (arr[2] < 9) {
+const getNewVersion = (arr: number[]): number[] => {
+    if (arr[2] < 99) {
         arr[2] = +arr[2] + 1
-    } else if (arr[1] < 9) {
+    } else if (arr[1] < 99) {
         arr[1] = +arr[1] + 1
         arr[2] = 0
     } else {
@@ -15,7 +15,7 @@ const getNewVersion = (arr) => {
     return arr
 }
 /** @description 读取package  */
-const changePackageVersion = () => {
+const changePackageVersion = (): void => {
     let packagePathName = path.join(__dirname, './../../package.json')//拼接用来读取的文件路径，当前路径加上config.js
     let packageText = fs.createReadStream(packagePathName)//创建可读流
     packageText.setEncoding("utf8");//设置文件编码
@@ -24,14 +24,13 @@ const changePackageVersion = () => {
         let arr = newPackageText.version.split('.');//切割后的版本号数组
         arr = getNewVersion(arr);
         newPackageText.version = arr.join('.');//转换为以"."分割的字符串    
-        fs.writeFile(packagePathName, JSON.stringify(newPackageText, null, "\t"), () => { });//用packageData覆盖package.json内容
-        changeHTmlVerion(arr.join('.'))
+        fs.writeFile(packagePathName, JSON.stringify(newPackageText, null, "\t"), () => { changeHTmlVerion(arr.join('.')) });//用packageData覆盖package.json内容
     })
 }
 
 /** @description 读取package  */
-const changeHTmlVerion = (newVersion) => {
-    let htmlPathName = path.join(__dirname, './../index.html')
+const changeHTmlVerion = (newVersion: number[]): void => {
+    let htmlPathName = path.join(__dirname, './index.html');
     let htmlText = fs.createReadStream(htmlPathName);
     htmlText.setEncoding("utf8");
     htmlText.on("data", function (chunk) {
