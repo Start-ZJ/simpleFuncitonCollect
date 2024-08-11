@@ -1,3 +1,3 @@
-import { checkIsNum } from './simpleFuncitonCollect';
-
-console.log(checkIsNum('1.2'));
+import { checkIsNum, getQueryString } from './simpleFuncitonCollect';
+const url = 'http://www.zhidianbao.cn:8088/qsxxwapdev/growthfootprint/index1.html?S=55t53er72ro&pdfurl=https%3A%2F%2Fqsedudev.oss-cn-hangzhou.aliyuncs.com%2Felec_evaluation%2F089c3898da75452e948ecca7e14dedfe.pdf&corpId=dingaf423cd85ed3720a35c2f4657eb6378f&appsysid=59#/./growthfootprint/templateConfiguration'
+console.log(decodeURIComponent('http://www.zhidianbao.cn:8088/qsxxwapdev/growthfootprint/index1.html?S=55t53er72ro&pdfurl=https%3A%2F%2Fqsedudev.oss-cn-hangzhou.aliyuncs.com%2Felec_evaluation%2F089c3898da75452e948ecca7e14dedfe.pdf&corpId=dingaf423cd85ed3720a35c2f4657eb6378f&appsysid=59#/./growthfootprint/templateConfiguration'));
