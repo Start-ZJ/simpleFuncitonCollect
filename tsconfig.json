@@ -24,7 +24,8 @@
         // "declarationMap": true, // 生成声明文件的 sourceMap
         "typeRoots": ["node_modules/@types"], // 声明文件目录，默认 node_modules/@types
         "types": [
-            "node"
+            "node",
+            "jest"
         ], // 声明文件包
         "removeComments": true, // 删除注释
         //   "noEmit": true, // 不输出文件

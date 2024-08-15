@@ -1,9 +1,4 @@
-const moment = require('moment');
-declare global {
-    interface Window {
-        [key: string]: any
-    }
-}
+import moment from 'moment';
 /** @description 执行一些简单的延时操作 */
 const asyncSetTime = (funName: Function, time: number): void => {
     setTimeout(() => { funName && typeof funName === "function" ? funName() : null }, time);
@@ -62,7 +57,6 @@ const AntiShakeFun = (): any => {
 
 }
 // 节流
-
 /** @description 获取当前月的长度 */
 const getMonthLength = (Year: string, Month: string): number => {
     return parseInt(moment(`${Year}/${Month}`, 'YYYY/MM').endOf('month').format("DD"));
